@@ -47,6 +47,8 @@ Class NimboIntegrationTools {
     
         $paymentId = str_pad($converted, 64, "0", STR_PAD_LEFT);
 
+        $paymentId = substr($paymentId, -64);
+
         return $paymentId;
     }
 
